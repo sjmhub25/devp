@@ -4,13 +4,15 @@ pipeline {
     environment {
         IMAGE = "sowjanya2510/devp:v1"
         CREDS = "dockerhub-creds"
+        GIT_REPO = "https://github.com/sjmhub25/devp.git"
+        GIT_BRANCH = "main" // Ensure this matches your GitHub branch
     }
 
     stages {
 
-        stage('Clone') {
+        stage('Checkout') {
             steps {
-                git 'https://github.com/sjmhub25/devp.git'
+                git branch: "${GIT_BRANCH}", url: "${GIT_REPO}"
             }
         }
 
