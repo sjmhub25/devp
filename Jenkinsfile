@@ -10,7 +10,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/sowjanya2510/devp.git'
+                git 'https://github.com/sjmhub25/devp.git'
             }
         }
 
